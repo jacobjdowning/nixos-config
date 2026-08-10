@@ -51,6 +51,15 @@
   services.xserver.displayManager.lightdm.enable = true;
   services.displayManager.defaultSession = "none+i3";
 
+  services.libinput = {
+    enable = true;
+    mouse = {
+      middleEmulation = false;
+      accelProfile = "adaptive";
+      accelSpeed = "-0.8";
+    };
+  };
+
   services.udisks2.enable = true; #used for auto-mounting media with udiskie
 
   # Some programs need SUID wrappers, can be configured further or are
