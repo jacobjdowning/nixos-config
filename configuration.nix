@@ -62,6 +62,8 @@
 
   services.udisks2.enable = true; #used for auto-mounting media with udiskie
 
+  services.gvfs.enable = true; # this enables smb://
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;

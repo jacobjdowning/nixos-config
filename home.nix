@@ -26,6 +26,8 @@
       sshfs
       lutris
       git
+      glib
+      ranger
    ];
 
    programs.rofi.enable = true;
