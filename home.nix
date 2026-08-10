@@ -27,10 +27,9 @@
       lutris
       git
       glib
-      ranger
+      vlc 
    ];
 
-   programs.rofi.enable = true;
 
    xsession.windowManager.i3.config.startup = [
       {
@@ -46,6 +45,15 @@
 
    services.udiskie.enable = true;
    services.udiskie.tray = "always";
+   
+   programs.rofi.enable = true;
+   
+   programs.ranger = {
+      enable = true;
+      rifle = [
+         { condition = "mime ^video"; command = "vlc -- \"$@\""; }
+      ];
+   };
    
    programs.home-manager.enable = true;
    programs.i3status.enable = true;
