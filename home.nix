@@ -29,6 +29,8 @@
       glib
       vlc 
       (callPackage ./g13.nix { })
+      unzip
+      wowup-cf
    ];
 
 
