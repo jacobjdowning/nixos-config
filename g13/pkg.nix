@@ -26,8 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
 
 	buildFlags = [ "g13d" "pbm2lpbm" ]; #This is to skip building runtests
 
-	cmakeBuildType = "Debug";
-	
 	# There was no install instructions in g13's CMakeList.txt so this just
 	# moves the two build targets into a bin directory in the nix store
 	# this also moves the udev rule from the source code into a place where
