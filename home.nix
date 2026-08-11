@@ -46,8 +46,14 @@
 
    services.dunst.enable = true;
 
-   services.picom.enable = true;
-   services.picom.vSync = true;
+   services.picom = {
+   	enable = true;
+   	vSync = true;
+	backend = "glx";
+	settings = {
+		unredir-if-possible = false;
+	};
+   };
 
    services.udiskie.enable = true;
    services.udiskie.tray = "always";
