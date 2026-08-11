@@ -35,7 +35,7 @@
   users.users."jjd" = {
     isNormalUser = true;
     description = "Jake Downing";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "uinput" ];
     packages = with pkgs; [];
   };
 
@@ -64,6 +64,8 @@
 
   services.gvfs.enable = true; # this enables smb://
 
+  services.udev.packages = [ (pkgs.callPackage ./g13.nix { }) ];
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
@@ -82,6 +84,9 @@
     powerManagement.enable = false;
     nvidiaSettings = true;
   };
+
+  # creates a 'uinput' group that any user that wants to use the g13 has to be in
+  hardware.uinput.enable = true;
 
   # List services that you want to enable:
 

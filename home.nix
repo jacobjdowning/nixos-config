@@ -28,6 +28,7 @@
       git
       glib
       vlc 
+      (callPackage ./g13.nix { })
    ];
 
 
