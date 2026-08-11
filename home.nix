@@ -64,6 +64,7 @@
       enable = true;
       rifle = [
          { condition = "mime ^video"; command = "vlc -- \"$@\""; }
+         { condition = "mime ^text"; command = "nvim -- \"$@\""; }
       ];
    };
    
