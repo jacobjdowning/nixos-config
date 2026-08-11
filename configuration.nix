@@ -64,7 +64,7 @@
 
   services.gvfs.enable = true; # this enables smb://
 
-  services.udev.packages = [ (pkgs.callPackage ./g13.nix { }) ];
+  services.udev.packages = [ (pkgs.callPackage ./g13/pkg.nix { }) ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

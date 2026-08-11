@@ -8,7 +8,6 @@
    };
    xsession.windowManager.i3.config.terminal = "alacritty";
 
-
    home.username = "jjd";
    home.homeDirectory = "/home/jjd";
 
@@ -28,13 +27,15 @@
       git
       glib
       vlc 
-      (callPackage ./g13.nix { })
       unzip
       wowup-cf
       spotify
       discord
    ];
 
+   imports = [ ./g13 ];
+
+   g13.enable = true;
 
    xsession.windowManager.i3.config.startup = [
       {
