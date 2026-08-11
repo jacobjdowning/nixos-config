@@ -31,6 +31,8 @@
       (callPackage ./g13.nix { })
       unzip
       wowup-cf
+      spotify
+      discord
    ];
 
 
