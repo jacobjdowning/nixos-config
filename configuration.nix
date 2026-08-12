@@ -56,7 +56,7 @@
     mouse = {
       middleEmulation = false;
       accelProfile = "adaptive";
-      accelSpeed = "-0.8";
+      accelSpeed = "-0.9";
     };
   };
 
