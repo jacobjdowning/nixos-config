@@ -31,6 +31,7 @@
       wowup-cf
       spotify
       discord
+      libreoffice
    ];
 
    imports = [ ./g13 ];
