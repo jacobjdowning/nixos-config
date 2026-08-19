@@ -32,6 +32,7 @@
       spotify
       discord
       libreoffice
+      luarocks # for lazy.nvim
    ];
 
    imports = [ ./g13 ];
