@@ -33,6 +33,8 @@
       discord
       libreoffice
       luarocks # for lazy.nvim
+      ludusavi
+      prismlauncher
    ];
 
    imports = [ ./g13 ];
