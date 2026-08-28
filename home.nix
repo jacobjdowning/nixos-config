@@ -17,7 +17,6 @@
    home.packages = with pkgs; [
       alacritty
       firefox
-      neovim
       polkit_gnome
       libnotify
       backintime
@@ -37,7 +36,10 @@
       prismlauncher
    ];
 
-   imports = [ ./g13 ];
+   imports = [ 
+   	./g13
+	./nvim
+   ];
 
    g13.enable = true;
 
