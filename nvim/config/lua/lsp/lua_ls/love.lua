@@ -1,12 +1,11 @@
 return {
 	runtime = {
-		veriosn = 'LuaJIT',
+		version = 'LuaJIT',
 	},
-	workspace = {
-		checkThirdParty = false,
+	workspace = { checkThirdParty = false,
 		library = { '${3rd}/love2d/library', },
 	},
-	disgnostics = {
+	diagnostics = {
 		globals = { 'love' },
 	},
 }
