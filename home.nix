@@ -34,6 +34,7 @@
       luarocks # for lazy.nvim
       ludusavi
       prismlauncher
+      steam
    ];
 
    imports = [ 
