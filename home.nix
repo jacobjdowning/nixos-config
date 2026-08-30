@@ -35,6 +35,7 @@
       ludusavi
       prismlauncher
       steam
+      mupdf
    ];
 
    imports = [ 
