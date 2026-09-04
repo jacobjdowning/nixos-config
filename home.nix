@@ -62,7 +62,7 @@
 		unredir-if-possible = true;
 		unredir-if-possible-exclude = [
 			"class_g = 'firefox'"
-			"class_g - 'vlc'"
+			"class_g = 'vlc'"
 		];
 	};
    };
