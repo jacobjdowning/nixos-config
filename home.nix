@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ pkgs, lib, ... }:
 {
    xsession.enable = true;
    xsession.windowManager.i3.enable = true;
