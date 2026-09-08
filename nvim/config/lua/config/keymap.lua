@@ -22,3 +22,6 @@ vim.keymap.set('i', '<CR>', function()
 	end
 	return '<CR>'
 end, { expr = true })
+
+--debug
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = "Show Diagnostic dialogue" })
