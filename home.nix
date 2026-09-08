@@ -1,12 +1,5 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 {
-   xsession.enable = true;
-   xsession.windowManager.i3.enable = true;
-   xsession.windowManager.i3.config.keybindings = lib.mkOptionDefault {
-      "mod1+b" = "exec firefox";
-      "mod1+p" = "exec rofi -show drun";
-   };
-   xsession.windowManager.i3.config.terminal = "alacritty";
 
    home.username = "jjd";
    home.homeDirectory = "/home/jjd";
@@ -41,6 +34,7 @@
    imports = [ 
    	./g13
 	./nvim
+	./desktop
    ];
 
    g13.enable = true;
@@ -82,5 +76,4 @@
    };
    
    programs.home-manager.enable = true;
-   programs.i3status.enable = true;
 }
