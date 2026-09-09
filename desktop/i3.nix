@@ -6,4 +6,5 @@
       "mod1+p" = "exec rofi -show drun";
    };
    xsession.windowManager.i3.config.terminal = "alacritty";
+   xsession.windowManager.i3.config.bars = [];
 }
