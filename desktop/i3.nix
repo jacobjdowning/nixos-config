@@ -30,10 +30,10 @@ in
 		};
 		colors = {
 			focused = {
-				border = "#4F422E";
-				background = "#4F422E";
-				indicator = "#4F422E";
-				childBorder = "#4F422E";
+				border = "#89B482";
+				background = "#89B482";
+				indicator = "#89B482";
+				childBorder = "#89B482";
 				text = "#282828";
 			};
 			unfocused = {
