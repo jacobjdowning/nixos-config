@@ -1,4 +1,10 @@
-{ lib, ...}:
+{ lib, pkgs, ...}:
+let
+	wallpaper = pkgs.fetchurl{
+		url = "https://4kwallpapers.com/images/wallpapers/algonquin-1920x1080-11432.jpg";
+		hash = "sha256-jdqT3604qyc6TmsCWdrXTJQF6tiaFJDlBEP2lEFbcWU=";
+	};
+in
 {
 	xsession.windowManager.i3.enable = true;
 	xsession.windowManager.i3.config = {
@@ -6,6 +12,13 @@
       			"mod1+b" = "exec firefox";
       			"mod1+p" = "exec rofi -show drun";
    		};
+		startup = [
+			{
+				command = "feh --bg-fill ${wallpaper}";
+				always = true;
+				notification = false;
+			}
+		];
    		terminal = "alacritty";
    		bars = [];
 		gaps = {
