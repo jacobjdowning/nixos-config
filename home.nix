@@ -8,7 +8,6 @@
    home.stateVersion = "26.05";
 
    home.packages = with pkgs; [
-      alacritty
       firefox
       polkit_gnome
       libnotify
@@ -35,6 +34,7 @@
    	./g13
 	./nvim
 	./desktop
+	./terminal
    ];
 
    g13.enable = true;
