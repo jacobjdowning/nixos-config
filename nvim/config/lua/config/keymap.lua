@@ -23,5 +23,9 @@ vim.keymap.set('i', '<CR>', function()
 	return '<CR>'
 end, { expr = true })
 
---debug
+-- lsp
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = "Show Diagnostic dialogue" })
+
+--debug
+local dap = require("dap")
+vim.keymap.set('n', '<f5>', dap.continue, {desc = "Run task or contiue debugger"})
