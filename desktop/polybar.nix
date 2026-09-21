@@ -57,6 +57,10 @@
 				label = "%date%";
 			};
 		};
+	};	
+	systemd.user.services.polybar.Unit = {
+		After = [ "graphical-session.target" ];
+		PartOf = [ "graphical-session.target" ];
 	};
 }
 
