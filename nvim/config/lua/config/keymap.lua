@@ -28,4 +28,16 @@ vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = "Show Diagn
 
 --debug
 local dap = require("dap")
-vim.keymap.set('n', '<f5>', dap.continue, {desc = "Run task or contiue debugger"})
+vim.keymap.set('n', '<f5>', function()
+	local root = vim.lsp.buf.list_workspace_folders()[1] or vim.fn.getcwd()
+	root = root .. "/.nvim"
+	if vim.fn.filereadable(root .. "/dap.lua") == 1 then
+		dap.continue()
+	elseif vim.fn.filereadable(root .. "/launch.lua") == 1 then
+		vim.cmd('split | terminal ' .. dofile(root.."/launch.lua"))
+	end
+end, {desc = "Run task or contiue debugger"})
+
+--nvim tree
+local nvim_tree = require("nvim-tree.api")
+vim.keymap.set('n', '<leader>b', nvim_tree.tree.toggle , {desc = "Toggle nvim tree pane"})
