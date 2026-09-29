@@ -28,6 +28,7 @@
       prismlauncher
       steam
       mupdf
+      love
    ];
 
    imports = [ 
