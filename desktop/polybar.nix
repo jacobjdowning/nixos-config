@@ -30,6 +30,11 @@
 				
 				modules-left = "i3";
 				modules-center = "date";
+
+				tray-position = "right";
+				tray-padding = 4;
+				tray-background = "\${colors.bg0}";
+				tray-maxsize = 16;
 			};
 			"module/i3" = {
 				type = "internal/i3";
