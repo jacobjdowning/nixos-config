@@ -9,8 +9,6 @@
 
    home.packages = with pkgs; [
       firefox
-      polkit_gnome
-      libnotify
       backintime
       backintime-common
       sshfs
@@ -40,12 +38,6 @@
 
    g13.enable = true;
 
-   xsession.windowManager.i3.config.startup = [
-      {
-         command = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
-	 notification = false;
-      }
-   ];
 
    services.picom = {
    	enable = true;
