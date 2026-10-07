@@ -11,5 +11,6 @@
 		./polybar.nix
 		./cursor.nix
 		./dunst.nix
+		./polkit.nix
 	];
 }
