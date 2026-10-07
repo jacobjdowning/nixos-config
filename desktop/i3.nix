@@ -8,9 +8,10 @@ in
 {
 	xsession.windowManager.i3.enable = true;
 	xsession.windowManager.i3.config = {
+		modifier = "mod4";
 		keybindings = lib.mkOptionDefault {
-      			"mod1+b" = "exec firefox";
-      			"mod1+p" = "exec rofi -show drun";
+      			"mod4+b" = "exec firefox";
+      			"mod4+p" = "exec rofi -show drun";
    		};
 		startup = [
 			{
