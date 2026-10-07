@@ -12,19 +12,12 @@
       backintime
       backintime-common
       sshfs
-      lutris
       git
-      vlc 
       unzip
-      wowup-cf
       spotify
       discord
       libreoffice
       luarocks # for lazy.nvim
-      ludusavi
-      prismlauncher
-      steam
-      mupdf
       love
    ];
 
@@ -34,6 +27,7 @@
 	./desktop
 	./terminal
 	./files
+	./games
    ];
 
    g13.enable = true;
@@ -42,7 +36,6 @@
    services.udiskie.tray = "always";
    
    programs.rofi.enable = true;
-   
    
    programs.home-manager.enable = true;
 }
