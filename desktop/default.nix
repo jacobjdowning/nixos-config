@@ -12,5 +12,6 @@
 		./cursor.nix
 		./dunst.nix
 		./polkit.nix
+		./compositor.nix
 	];
 }

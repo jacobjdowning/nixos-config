@@ -38,20 +38,6 @@
 
    g13.enable = true;
 
-
-   services.picom = {
-   	enable = true;
-   	vSync = true;
-	backend = "glx";
-	settings = {
-		unredir-if-possible = true;
-		unredir-if-possible-exclude = [
-			"class_g = 'firefox'"
-			"class_g = 'vlc'"
-		];
-	};
-   };
-
    services.udiskie.enable = true;
    services.udiskie.tray = "always";
    
