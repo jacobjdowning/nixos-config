@@ -14,7 +14,6 @@
       sshfs
       lutris
       git
-      glib
       vlc 
       unzip
       wowup-cf
@@ -34,6 +33,7 @@
 	./nvim
 	./desktop
 	./terminal
+	./files
    ];
 
    g13.enable = true;
@@ -43,14 +43,6 @@
    
    programs.rofi.enable = true;
    
-   programs.ranger = {
-      enable = true;
-      rifle = [
-         { condition = "mime ^video"; command = "vlc -- \"$@\""; }
-         { condition = "mime ^text"; command = "nvim -- \"$@\""; }
-	 { condition = "mime ^application/pdf"; command = "mupdf -- \"$@\""; }
-      ];
-   };
    
    programs.home-manager.enable = true;
 }
