@@ -10,5 +10,6 @@
 		./i3.nix
 		./polybar.nix
 		./cursor.nix
+		./dunst.nix
 	];
 }
