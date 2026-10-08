@@ -5,6 +5,7 @@
 		#Language Servers
 		nixd
 		lua-language-server
+		bash-language-server
 	];
 
 	xdg.configFile."nvim" = {
