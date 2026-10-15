@@ -16,7 +16,7 @@
             ./configuration.nix
             { nix.nixPath = [ "nixpkgs=${nixpkgs}" ]; }#sets $NIX_PATH for nixd, nix-shell
             home-manager.nixosModules.home-manager {
-               home-manager.useGlobalPkgs = true; #I think I want to change this to pass pkgs, just seems cleaner to me
+               home-manager.useGlobalPkgs = true; 
                home-manager.useUserPackages = true;
                home-manager.users.jjd = import ./home.nix;
             }
