@@ -31,6 +31,7 @@ local dap = require("dap")
 vim.keymap.set('n', '<f5>', function()
 	local root = vim.lsp.buf.list_workspace_folders()[1] or vim.fn.getcwd()
 	root = root .. "/.nvim"
+	vim.cmd('wa')
 	if vim.fn.filereadable(root .. "/dap.lua") == 1 then
 		dap.continue()
 	elseif vim.fn.filereadable(root .. "/launch.lua") == 1 then
