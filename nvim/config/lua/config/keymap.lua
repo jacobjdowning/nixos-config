@@ -35,7 +35,10 @@ vim.keymap.set('n', '<f5>', function()
 	if vim.fn.filereadable(root .. "/dap.lua") == 1 then
 		dap.continue()
 	elseif vim.fn.filereadable(root .. "/launch.lua") == 1 then
-		vim.cmd('split | terminal ' .. dofile(root.."/launch.lua"))
+		local cmd = dofile(root .. "/launch.lua")
+		vim.cmd('split')
+		vim.cmd('enew')
+		vim.fn.jobstart(cmd, { term = true })
 	end
 end, {desc = "Run task or contiue debugger"})
 
