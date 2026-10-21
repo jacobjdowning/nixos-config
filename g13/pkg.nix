@@ -31,7 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
 	# this also moves the udev rule from the source code into a place where
 	# services.udev.packages can install it
 	installPhase = ''
-		runHook perInstall
+		runHook preInstall
 		install -Dm755 g13d			$out/bin/g13d
 		install -Dm755 pbm2lpbm			$out/bin/pbm2lpbm
 		install -Dm644 $src/91-g13.rules	$out/lib/udev/rules.d/91-g13.rules
