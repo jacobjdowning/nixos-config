@@ -7,4 +7,8 @@
 		prismlauncher
 		steam
 	];
+
+	imports = [
+		./battlenet.nix
+	];
 }

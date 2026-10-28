@@ -7,9 +7,12 @@
          url = "github:nix-community/home-manager/release-26.05"; #Make sure to keep nixpkgs url and home manager url as the same version
          inputs.nixpkgs.follows = "nixpkgs";
       };
+      battlenet-umu = {
+         url = "github:jacobjdowning/battlenet-umu";
+      };
    };
 
-   outputs = { self, nixpkgs, home-manager, ... }:{
+   outputs = { self, nixpkgs, home-manager, battlenet-umu, ... }:{
       nixosConfigurations.shadowmoon = nixpkgs.lib.nixosSystem {
          system = "x86_64-linux";
          modules = [
@@ -19,6 +22,7 @@
                home-manager.useGlobalPkgs = true; 
                home-manager.useUserPackages = true;
                home-manager.users.jjd = import ./home.nix;
+	       home-manager.extraSpecialArgs = { inherit battlenet-umu; };
             }
          ];
       }; 

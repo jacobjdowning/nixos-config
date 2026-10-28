@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, battlenet-umu, ... }:
 {
 
    home.username = "jjd";
@@ -22,6 +22,7 @@
    ];
 
    imports = [ 
+   	battlenet-umu.homeModules.default
    	./g13
 	./nvim
 	./desktop
