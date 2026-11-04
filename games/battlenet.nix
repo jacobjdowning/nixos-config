@@ -1,4 +1,9 @@
-{ ... }:{ programs.battlenet-umu = {
+{ ... }:{ programs.battlenet-umu = 
+let
+	wow = "Program Files (x86)/World of Warcraft";
+	addonFolder = "Interface/AddOns";
+in
+{
 	enable = true;
 	games = [
 		{ name = "Battle.net"; }
@@ -8,11 +13,26 @@
 		}
 		{
 			name = "World of Warcraft";
-			path = "Program Files (x86)/World of Warcraft/_retail_/Wow.exe";
+			path = "${wow}/_retail_/Wow.exe";
 		}
 		{
 			name = "WoW: Classic";
-			path = "Program Files (x86)/World of Warcraft/_classic_era_/WowClassic.exe";
+			path = "${wow}/_classic_era_/WowClassic.exe";
 		}
 	];
+	addons = {
+		enable = true;
+		versions = [
+			{
+				name = "era";
+				addonDir = "${wow}/_classic_era_/${addonFolder}";
+				flavour = "vanilla_classic";
+				addons = [
+					"github:Peterodox/YUI-Dialogue"
+					"github:Total-RP/Total-RP-3"
+					"github:DustinChecketts/VendorPricePlus"
+				];
+			}
+		];
+	};
 };}
