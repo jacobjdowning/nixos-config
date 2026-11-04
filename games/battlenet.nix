@@ -45,6 +45,7 @@ in
 				addons = [
 					"github:Peterodox/YUI-Dialogue"
 					"github:Total-RP/Total-RP-3"
+					"github:alexdia25/forever-quest-tint"
 				];
 			}
 		];
