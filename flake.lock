@@ -6,11 +6,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1793729530,
-        "narHash": "sha256-S8FUQWIfHaHs47Rphw7YHtvTmawwohwmlQSyQhsYzbo=",
+        "lastModified": 1793809818,
+        "narHash": "sha256-MMzDlxAX9LvDkytamrrhr0qYgCyhAWbJcIBWafbUPIE=",
         "owner": "jacobjdowning",
         "repo": "battlenet-umu",
-        "rev": "560abdae6a07f3a956d5b7b7e4d9f7101d2bd35f",
+        "rev": "c4aab38d78aca0aa0b08610c4c876ffb2b971d9d",
         "type": "github"
       },
       "original": {

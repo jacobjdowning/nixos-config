@@ -1,4 +1,4 @@
-{ ... }:{ programs.battlenet-umu = 
+{ lib, ... }:{ programs.battlenet-umu = 
 let
 	wow = "Program Files (x86)/World of Warcraft";
 	addonFolder = "Interface/AddOns";
@@ -19,9 +19,14 @@ in
 			name = "WoW: Classic";
 			path = "${wow}/_classic_era_/WowClassic.exe";
 		}
+		{
+			name = "WoW: Forever";
+			path = "${wow}/_forever_/Wow.exe";
+		}
 	];
 	addons = {
 		enable = true;
+		tokens.wagoAddons = lib.trim (builtins.readFile ./wago.key);
 		versions = [
 			{
 				name = "era";
@@ -31,6 +36,15 @@ in
 					"github:Peterodox/YUI-Dialogue"
 					"github:Total-RP/Total-RP-3"
 					"github:DustinChecketts/VendorPricePlus"
+				];
+			}
+			{
+				name = "forever";
+				addonDir = "${wow}/_forever_/${addonFolder}";
+				flavour = "forever_classic";
+				addons = [
+					"github:Peterodox/YUI-Dialogue"
+					"github:Total-RP/Total-RP-3"
 				];
 			}
 		];
