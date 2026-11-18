@@ -1,0 +1,137 @@
+/**
+ * Gruvbox Material Dark — Rofi Theme
+ *
+ * Same layout as rofi's built-in gruvbox themes (via gruvbox-common.rasinc),
+ * with the Gruvbox Material palette swapped in.
+ *
+ * 1. Palette: every color from the vim plugin as a variable.
+ * 2. Theme mapping: assigns palette colors to the variable names the
+ *    built-in gruvbox layout expects. Change the mappings to restyle.
+ */
+
+* {
+    /* ── Palette ─────────────────────────────────────────────────── */
+
+    /* Backgrounds */
+    bg-dim:              #1b1b1b;
+    bg0:                 #282828;
+    bg1:                 #32302f;
+    bg2:                 #32302f;
+    bg3:                 #45403d;
+    bg4:                 #45403d;
+    bg5:                 #5a524c;
+
+    /* Statusline backgrounds */
+    bg-statusline1:      #32302f;
+    bg-statusline2:      #3a3735;
+    bg-statusline3:      #504945;
+
+    /* Visual-selection backgrounds */
+    bg-visual-red:       #4c3432;
+    bg-visual-yellow:    #4f422e;
+    bg-visual-green:     #3b4439;
+    bg-visual-blue:      #374141;
+    bg-visual-purple:    #443840;
+
+    /* Diff backgrounds */
+    bg-diff-red:         #402120;
+    bg-diff-green:       #34381b;
+    bg-diff-blue:        #0e363e;
+
+    /* Misc backgrounds */
+    bg-current-word:     #3c3836;
+
+    /* Foregrounds */
+    fg0:                 #d4be98;
+    fg1:                 #ddc7a1;
+
+    /* Accent colors */
+    col-red:             #ea6962;
+    col-orange:          #e78a4e;
+    col-yellow:          #d8a657;
+    col-green:           #a9b665;
+    col-aqua:            #89b482;
+    col-blue:            #7daea3;
+    col-purple:          #d3869b;
+
+    /* Background accent aliases */
+    bg-red:              #ea6962;
+    bg-green:            #a9b665;
+    bg-yellow:           #d8a657;
+
+    /* ── Theme mapping (names expected by gruvbox-common.rasinc) ── */
+
+    highlight:                   bold italic;
+    scrollbar:                   true;
+
+    background:                  @bg0;
+    background-color:            @background;
+    foreground:                  @fg1;
+    border-color:                @bg5;
+    separatorcolor:              @border-color;
+    scrollbar-handle:            @border-color;
+
+    normal-background:           @background;
+    normal-foreground:           @foreground;
+    alternate-normal-background: @bg1;
+    alternate-normal-foreground: @foreground;
+    selected-normal-background:  @bg3;
+    selected-normal-foreground:  @fg1;
+
+    active-background:           @background;
+    active-foreground:           @col-blue;
+    alternate-active-background: @background;
+    alternate-active-foreground: @active-foreground;
+    selected-active-background:  @col-blue;
+    selected-active-foreground:  @bg0;
+
+    urgent-background:           @background;
+    urgent-foreground:           @col-red;
+    alternate-urgent-background: @background;
+    alternate-urgent-foreground: @urgent-foreground;
+    selected-urgent-background:  @col-red;
+    selected-urgent-foreground:  @bg0;
+}
+
+/* Layout from rofi's built-in gruvbox theme */
+@import "gruvbox-common.rasinc"
+
+window {
+    width:  1000px;
+    height: 387px;
+}
+
+/* Dotted separator between the input bar and the list */
+listview {
+    border:       2px dash 0 0;
+    border-color: @separatorcolor;
+}
+
+/* Entry count (filtered/total) in the input bar */
+inputbar {
+    children: [ prompt, textbox-prompt-colon, entry, num-filtered-rows, textbox-num-sep, num-rows, case-indicator ];
+}
+
+textbox-prompt-colon {
+    expand:     false;
+    str:        ":";
+    margin:     0 0.3em 0 0;
+    text-color: inherit;
+}
+
+textbox-num-sep {
+    expand:     false;
+    str:        "/";
+    margin:     0 0.3em;
+    text-color: @bg5;
+}
+
+num-filtered-rows {
+    expand:     false;
+    text-color: @bg5;
+}
+
+num-rows {
+    expand:     false;
+    text-color: @bg5;
+}

@@ -13,5 +13,6 @@
 		./dunst.nix
 		./polkit.nix
 		./compositor.nix
+		./rofi
 	];
 }

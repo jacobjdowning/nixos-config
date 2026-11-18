@@ -37,7 +37,5 @@
    services.udiskie.enable = true;
    services.udiskie.tray = "always";
    
-   programs.rofi.enable = true;
-   
    programs.home-manager.enable = true;
 }
