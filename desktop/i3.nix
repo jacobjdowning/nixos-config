@@ -13,18 +13,19 @@ in
 		modifier = "mod4";
 		menu = "rofi -show drun";
 		keybindings = lib.mkOptionDefault {
-       			  "${cfg.config.modifier}+i" = "exec firefox";
+			"${cfg.config.modifier}+w" = "exec firefox";
+			"${cfg.config.modifier}+p" = "exec rofi -show p -modi p:'rofi-power-menu'";
 
-			  "${cfg.config.modifier}+h" = "focus left";
-			  "${cfg.config.modifier}+j" = "focus down";
-			  "${cfg.config.modifier}+k" = "focus up";
-			  "${cfg.config.modifier}+l" = "focus right";
+			"${cfg.config.modifier}+h" = "focus left";
+			"${cfg.config.modifier}+j" = "focus down";
+			"${cfg.config.modifier}+k" = "focus up";
+			"${cfg.config.modifier}+l" = "focus right";
 
-			  "${cfg.config.modifier}+Shift+h" = "move left";
-			  "${cfg.config.modifier}+Shift+j" = "move down";
-			  "${cfg.config.modifier}+Shift+k" = "move up";
-			  "${cfg.config.modifier}+Shift+l" = "move right";
-			};
+			"${cfg.config.modifier}+Shift+h" = "move left";
+			"${cfg.config.modifier}+Shift+j" = "move down";
+			"${cfg.config.modifier}+Shift+k" = "move up";
+			"${cfg.config.modifier}+Shift+l" = "move right";
+		};
 		startup = [
 			{
 				command = "feh --bg-fill ${wallpaper}";
@@ -55,8 +56,7 @@ in
 				indicator = "#282828";
 				childBorder = "#282828";
 				text = "#d4BE98";
-			};
-				
+			};		
 		};
 	};
 }
