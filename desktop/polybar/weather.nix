@@ -43,7 +43,7 @@ stdenv.mkDerivation (finalAttrs: {
 		COLOR_FOG="#5a524c";          # bg5
 		COLOR_TORNADO="#d4be98";      # fg0
 		COLOR_SUN="#d8a657";          # yellow
-		COLOR_MOON="#d8a657";         # yellow
+		COLOR_MOON="#7daea3";         # blue 
 		COLOR_ERR="#ea6962";          # red
 		COLOR_WIND="#89b482";         # aqua
 		COLOR_COLD="#7daea3";         # blue
