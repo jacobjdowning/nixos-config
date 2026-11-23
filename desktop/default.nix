@@ -8,7 +8,7 @@
 
 	imports = [
 		./i3.nix
-		./polybar.nix
+		./polybar
 		./cursor.nix
 		./dunst.nix
 		./polkit.nix

@@ -1,4 +1,6 @@
-{ pkgs, ...}:
+{ pkgs, ...}:let
+	weather = pkgs.callPackage ./weather.nix {};
+in
 {
 	services.polybar = {
 		enable = true;
@@ -30,6 +32,7 @@
 				
 				modules-left = "i3";
 				modules-center = "date";
+				modules-right = "weather";
 
 				tray-position = "right";
 				tray-padding = 4;
@@ -60,6 +63,13 @@
 				interval = 1;
 				date = "%Y-%m-%d %I:%M:%S";
 				label = "%date%";
+			};
+
+			"module/weather" = {
+				type = "custom/script";
+				exec = "${weather}/bin/polybar-weather";
+				tail = false;
+				interval = 960;
 			};
 		};
 	};	
