@@ -35,7 +35,7 @@ in
 				modules-right = "weather";
 
 				tray-position = "right";
-				tray-padding = 4;
+				tray-padding = 6;
 				tray-background = "\${colors.bg0}";
 				tray-maxsize = 16;
 			};
