@@ -5,7 +5,7 @@ return {
 		config = function()
 			vim.lsp.config('lua_ls', require("lsp.lua_ls"))
 			vim.lsp.config('nixd', require("lsp.nixd"))
-			vim.lsp.enable({ "lua_ls", "nixd", "bashls" })
+			vim.lsp.enable({ "lua_ls", "nixd", "bashls", "basedpyright" })
 		end,
 	}
 }

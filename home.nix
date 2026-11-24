@@ -17,7 +17,6 @@
       spotify
       discord
       libreoffice
-      luarocks # for lazy.nvim
       love
       git-crypt
    ];

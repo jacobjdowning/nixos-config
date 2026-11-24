@@ -2,10 +2,12 @@
 {
 	home.packages = with pkgs; [
 		neovim
+      		luarocks # for lazy.nvim
 		#Language Servers
 		nixd
 		lua-language-server
 		bash-language-server
+		basedpyright
 	];
 
 	xdg.configFile."nvim" = {
