@@ -19,6 +19,7 @@
       libreoffice
       love
       git-crypt
+      zip
    ];
 
    imports = [ 
