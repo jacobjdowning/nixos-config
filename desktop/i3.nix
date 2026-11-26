@@ -16,6 +16,7 @@ in
 			"${cfg.config.modifier}+w" = "exec firefox";
 			"${cfg.config.modifier}+p" = "exec rofi -show p -modi p:'rofi-power-menu'";
 			"XF86Calculator" = "exec rofi -show calc -modi calc -no-show-match -no-sort";
+			"${cfg.config.modifier}+b" = "split h";
 
 			"${cfg.config.modifier}+h" = "focus left";
 			"${cfg.config.modifier}+j" = "focus down";
